@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [joke, setJoke] = useState('');
@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <div style={styles.container}>
+    <div style={styles.wrapper}>
       <div style={styles.card}>
         <h1 style={styles.heading}>🤣 Joke Generator</h1>
         <button onClick={fetchJoke} style={styles.button}>
@@ -30,26 +30,31 @@ function App() {
 }
 
 const styles = {
-  container: {
-    height: '100vh',
-    backgroundColor: '#f2f2f2',
+  wrapper: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    height: '100vh',
+    width: '100vw',
+    margin: 0,
+    padding: 0,
+    background: '#f2f2f2',
+    overflow: 'hidden',
   },
   card: {
     backgroundColor: '#fff',
     padding: '2rem',
     borderRadius: '16px',
     boxShadow: '0 8px 20px rgba(0, 0, 0, 0.1)',
-    width: '90%',
     maxWidth: '500px',
+    width: '90%',
     textAlign: 'center',
   },
   heading: {
     fontSize: '2rem',
     marginBottom: '1.5rem',
     color: '#333',
+    fontWeight: 'bold',
   },
   button: {
     backgroundColor: '#0070f3',
