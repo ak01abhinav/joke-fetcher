@@ -19,7 +19,7 @@ function App() {
   return (
     <div style={styles.wrapper}>
       <div style={styles.card}>
-        <h1 style={styles.heading}>🤣 Joke Generator</h1>
+        <h1 style={styles.heading}>🎭 Joke Generator</h1>
         <button onClick={fetchJoke} style={styles.button}>
           {loading ? "Loading..." : "Tell me a joke"}
         </button>
